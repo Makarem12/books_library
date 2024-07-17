@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="color: #8B4513; text-align: center; margin-top: 20px;">Books List</h1>
+
+    {% for book in books_objs %}
+        <div style="border: 1px solid #ddd; padding: 15px; margin: 15px; border-radius: 5px; background-color: #D2B48C;">
+            <h3>Author: <a href="{% url 'book_details' book.pk %}" style="color: #b15a09;">{{ book.author }}</a></h3>
+             
+        </div>
+    {% endfor %}
+{% endblock content %}
